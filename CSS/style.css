@@ -265,7 +265,7 @@ body.light-theme {
 }
 
 .menu-toggle {
-    color: gray;
+    color: rgb(230, 196, 3);
 }
 
 .menu-toggle.active span:nth-child(3) {
