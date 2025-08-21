@@ -1,0 +1,156 @@
+/* ================================================================================================== */
+/* ===== Portfolio Page Styles ===== */
+/* ================================================================================================== */
+.portfolio-container {
+    padding-top: 6rem;
+}
+
+.portfolio-hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 4rem;
+}
+
+.portfolio-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.portfolio-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+
+.project-card {
+    background: var(--card-dark);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(184, 134, 11, 0.4);
+}
+
+.project-img {
+    height: 220px;
+    overflow: hidden;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.project-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.tech-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-bubbles span {
+    padding: 6px 14px;
+    background: rgba(184, 134, 11, 0.15);
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.project-links .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.project-links .btn.live {
+    background: var(--primary-color);
+    color: #111;
+    border: 2px solid var(--primary-color);
+}
+
+.project-links .btn.live:hover {
+    background: transparent;
+    color: var(--primary-color);
+}
+
+.project-links .btn.github {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.project-links .btn.github:hover {
+    background: var(--primary-color);
+    color: #111;
+}
+
+/* Light Theme Overrides */
+.light-theme .project-card {
+    background: var(--card-light);
+    border-color: var(--border-light);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.light-theme .project-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .tech-bubbles span {
+    background-color: #eee;
+    color: #555;
+    border-color: #ddd;
+}

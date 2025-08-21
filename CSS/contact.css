@@ -1,0 +1,132 @@
+/* ================================================================================================== */
+/* ===== Contact Page Styles ===== */
+/* ================================================================================================== */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 8rem 2rem;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    max-width: 1000px;
+    width: 100%;
+    background-color: var(--card-dark);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 1px solid var(--border-dark);
+}
+
+.contact-left h1 {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.contact-left p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    animation: slideInLeft 0.6s ease-out 0.2s forwards;
+    opacity: 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    animation: fadeIn 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-dark);
+    background: #2a2a2a;
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(184, 134, 11, 0.3);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-submit {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: #111;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+}
+
+
+/* Light Theme Overrides */
+.light-theme .contact-content {
+    background: var(--card-light);
+    border-color: var(--border-light);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.light-theme .contact-form input,
+.light-theme .contact-form textarea {
+    background-color: #f0f0f0;
+    border-color: var(--border-light);
+    color: var(--text-light);
+}
