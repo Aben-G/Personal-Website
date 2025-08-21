@@ -221,3 +221,54 @@
 .light-theme .social-icons a:hover {
     color: var(--primary-color);
 }
+
+/* ===== Mobile Adjustments for Blobs ===== */
+@media (max-width: 768px) {
+    .shape-blob.one {
+        left: 5%;
+        top: 10%;
+        height: 200px;
+        width: 200px;
+    }
+
+    .shape-blob.two {
+        right: 5%;
+        bottom: 5%;
+        height: 150px;
+        width: 150px;
+    }
+
+    .shape-blob.three {
+        left: 30%;
+        top: 40%;
+        height: 120px;
+        width: 120px;
+    }
+
+    /* Optionally reduce blur/contrast for performance */
+    .blob-container {
+        filter: blur(25px) contrast(20);
+    }
+}
+
+/* Optional: Extra small devices (<480px) */
+@media (max-width: 480px) {
+    .shape-blob.one {
+        height: 150px;
+        width: 150px;
+    }
+
+    .shape-blob.two {
+        height: 100px;
+        width: 100px;
+    }
+
+    .shape-blob.three {
+        height: 80px;
+        width: 80px;
+    }
+
+    .blob-container {
+        filter: blur(20px) contrast(15);
+    }
+}

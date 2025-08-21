@@ -154,3 +154,8 @@
     color: #555;
     border-color: #ddd;
 }
+
+#mario {
+    color: red;
+    font-weight: bold;
+}
